@@ -1,24 +1,12 @@
-# README
+# Weather Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo was created to be in the middle of my React front-end application Weather, a portfolio app, and a weather provider.
 
-Things you may want to cover:
+## Why
 
-* Ruby version
+When a React application is built, it bundles all its code and sends it to the client. This could include secrets like API keys (which is the case).
 
-* System dependencies
+## Solution
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The only correct storage of secrets is in-server-memory, not in repositories or on the client side. So this little backend application written in Rails is running on a free environment with my API key securely stored.
+The React app sends requests to it, and it authenticates and asks the weather provider about the current weather, and sends the answer back to React.
